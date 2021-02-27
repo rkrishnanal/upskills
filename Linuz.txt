@@ -1,0 +1,380 @@
+Linux 
+
+*os/kernel - is the part of prgm or prgm built in the os so that whatever commands 
+user gave our hardware onit who acted intermeditate b/w user command and hardware
+
+*Distrubuted under an open source license
+
+into linus Torvalds ,based on unix 
+
+*Server a reliable and stable server.
+
+*Ubuntu is a Linux distro based on Debian. It is NOT by Debian itself. It's by Canonical Inc. 
+
+Distros are abberviation of distribution
+
+FILE MANAGMENT
+
+ORDINARH=Y FILES -DATA,TEXT OR PROGRAM INSTRUCTIONS
+Special files-files provide access to hardware such as hard driver,cd-rom modems and ethernet adapters.
+
+Directories -store both special and ordinary files.
+
+COMMNADS
+PWD: Present working directory
+*Provides the information of current directory
+
+LS:Lists
+Lists can be used with different parameters for details file info
+
+ls-l(Long) 
+
+drwxr-xr-x-Premission 2-Memomry Block root-Group
+120-size in blocks , Date/Time of file creation,File or Directory name
+
+TERMINAL - CTRIL+ALT+F1
+
+$-STANDARD USER
+
+~ HOME DIRECTORY
+
+ll same as ls -l
+ls - i >  shows the indoe numbers of every directory
+ls -a > all hidden files 
+
+CAT Command > Can be user create and list file with content
+storing the file use ctrl+d to save.
+cat > file name 
+
+TOUCH > Can be used to create an empty file.
+ex: touch filename
+
+MV > Can be used to rename or move(cut-paste) files in same or another location
+
+cp > to copy file in same or another location
+
+ WC > to count the file word/letters in a file
+
+Wc -l > show the numbers of lines
+wc -w >  show the numbers of words
+wc -c > show the number of character
+
+Deleting 
+rm : to remove file
+
+rm <filename>
+rm <file1 file2 > to delete number of files at a time
+rm * wildcard delete the all files in the directory
+
+Linux Stream
+Stdin-  Standard input >>descriptor 0
+stdout - std output >> des 1
+stderr - std error >> des 2
+
+Dot(.) -current working directory
+.. >> -level above directory
+ 
+Make Directory
+
+mkdir (directory name)
+mkdir name1\ name2
+
+Premissions
+Owner premission -owner/creator file
+
+Group premission -Member of the group that a file 
+belongs
+
+Other(any) premissiosn all other/universal users.
+
+Read- view the contents
+
+write - grants the capability to modify
+
+execute -run a flie as a program 
+
+Chmod -change of the of premission
+ 
+  * premission can be change using to methods
+         *symbolic mode 
+         *Absolute/octal
+
++ add file or directory
+
+- remove file or directory
+ = sets the designated premission
+    - means file 
+     dr means directory 
+File premission using octal
+0 > No premission ----
+1 > Execute permission --x
+2 > Write Permission -w-
+3 > executre and write permission: 1(execute) +2 (write) =3
+4 > Read permission r--
+5 > read and execute permission:4(read) +1 (execute) =5 r-x
+6 > Read and write permission: 4(read) +2(write) = 6    rw-
+7 > all permission
+man + help  to get details scripting
+
+SHELL 
+
+What is shell : Command line interpreter.It translates commands entered
+bu=y the iser and converts them into language that is understant by the kernel. 
+
+Variable
+Is a character string to whic we asign a value.the value assigned coulb be a number,text
+filename device or any other type
+3 kind in shell
+* local variable:Present within the current instance of the shell
+its not available to programs that are started by the shell. they are set at the command prompt.
+
+Enviromental variable:
+is available to any child process of the shell.
+some programs need environment variables in order to funcion correctly,
+
+Shell Vairable:
+
+special variable is set by the shell and is required by the shell
+in order to function correctly. some of these variables are environment whereas other are local variables.
+
+
+BASIC OPERATORS
+*Arithmetic operators *Relational operator * Boolean Operators * string operators *file Test Operators
+
+ *Arithmeitc 
++ > Add values on either side of the operato
+- > Subtracts right hand operand from left hand operad
+* > either side of the operator
+/ > right hand operand
+%(Modulus) >> divides left hand operand by the right hand operand and returns remainder
+=(Assignmnet) Assigns right operand in left operand 
+== >> Compares two numbers
+!= 
+All the operators should in the [ ] square bracets
+
+RELATION OPERATORS
+-eq, -ne -gt -lt -ge and le
+
+BOOLEAN 
+! >> This logical negation this inverts a true condition int o false and vice versa
+-o >> This is logical or if one of the operands is ture then the condition becomes true.
+-a >> This logical AND. if both the operands are true then the condition becomes ture otherwise false.
+
+STRING OPERATORS
+= >> check if the value of two operands are equal or not 
+1= >> is not equal to 
+-z string operand size is m
+-n string operand size is non-zero
+str >> is not if its empty.
+
+FILE TEST OPERATORS
+-bfile >> if file is a block special file .
+if yes then condition become true
+
+-cfile >> check if file s character special file
+if yes then the condition becomes a true.
+
+-dfile >> cehck if file is directory 
+if the conditon become true
+
+-ffile checks if file is an oridnary files as
+opposed to directory or special file, if yes
+then the condition becomes true.
+
+-gfile >> checks f the fles has its set group ID
+(SGID) bit set if yes then the condition becomes true.
+
+-Kfile >> checks if file has its sticky bit set if 
+yes then the conditon become true
+
+-pfile checks if file is a named pipe if 
+yes condition becomes true.
+
+command --help >> show the descirption 
+
+
+SUDO COMMANDS
+sudo yum install package -RHEL
+sudo apt-get install package -dedian
+sudo dnf install package  - fedo
+
+
+W>> shows who logged in and all other details
+top > show all the task manager
+netstat -tupln >> show the ports lister in tcp and udp
+
+htop >> show all the details of computers
+
+ General notes: ----------------------
+
+
+-------- Notes on symbols and codes: ----------
+.   current directory
+..  directory above
+../..  directory above the directory
+
+ls flags
+-a  all (hidden + all directories)
+-l  long (full information on file (or all files)
+-h  human (making it easy to read)
+-alh  all 3 flags combined
+
+-------- Basic Codes: --------------------------
+mkdir Makes a new directory (folder)
+   Flagging with "-p" allows entire filepaths to be made
+
+rm  Remove
+   Flagging with "-r" (recursive) removes everything in that directory 
+
+cp  Copy  (e.g. cp location/file.txt newlocation/newfilename.txt)
+   When wanting a copy in the same file location, use "." as the file location
+
+mv  Move/Rename (to rename simply don't provide the directory)
+
+cat  Read file. Multiple files can be read after each other by adding them to the cat command with spaces
+
+nano texteditor (with GNU) recommended to use for now.
+
+vi  texteditor (with GNU) recommended to read the manual for this.
+      :q! = quit
+      :w = write
+
+----------- Software packages: ----------------------
+If you want to check out the other texteditors:
+
+sudo apt install vim
+sudo apt install emacs-25
+ 
+> forward the details
+< backward the details
+
+ps aux > some all detials happening in the kernel
+
+&& - the logical AND operator, useful for running things IF something else is successful.
+
+cut - divide output into two fields and select one of them.
+
+sort - sort items (by alphabetical order, etc.)
+
+uniq - only show unique output (duplicates not shown)
+
+wc - "word count." Count lines, letters, etc.
+
+grep - the very basics of this unbelievably powerful searching/pattern-matching command.
+ 
+
+Basic package management with Debian's apt-get command-line tool. We cover:
+
+apt-get install
+apt-get update
+apt-get upgrade
+apt-cache search
+apt-get remove
+ 
+ also cover the basics for more advanced use: adding PPAs (Personal Package Archives)--essentially third-party 
+software repositories--and looking at /etc/apt/sources.list and how it's structured to manage your repositories.
+
+ifconfig > for LAN network details
+iwconfig > for wireless network details
+
+uname -a show all details of operating system and version
+blkid > shows the details of the HDD.
+
+df > shows the disk detials
+ 
+Permission
+
+Read=4
+Write=2
+Xecute=1
+It's not that difficult. You just add the ones you want:
+4+2+1 = (r+w+x) = 7
+4+2 = (r+w) = 6
+4+1 = (r+x) = 5
+4 = (r) = 4
+2+1 = (w+x) = 3
+2 = (w) = 2
+1 = (x) = 1
+
+ Create user
+useradd -m create home -d directory /home/usermane  -s /bin/bash/username
+add password > passwd (username)
+
+PROCESSES :
+basically a program that runs
+
+"has 2 parts" :
+1. adress space that it can use, where it can write to
+2. kernel data structure keeping following information :
+
+* PID : primary key for processes
+* parent id : pid of process that started this one, if parent dies then child process is reparented to "init" process
+* UID : tells which user owns the process (same for groupID)
+* EffectiveUserID : (EUID) process spawned by user but shouldn't have same permissions as user (same for EgroupID)
+* Niceness : if NI high then it's low priority and let's lower NI processes take resources
+
+Life cycle of a process :
+
+
+created by parent process by forking itself,
+giving child that starts other programs/processes
+death : exiting with return value given to parent process
+ 
+Sudo -i to change root
+ 
+.. specifiy the parent directory
+
+whoami - show the who logged into system
+w- how session is going on 
+id show guid detials of the use
+hostname show the details system details 
+
+hostnamectl set-name "systemname" --static
+
+
+/ -- root the top of file system hierarchy
+/bin -- binariner and other executeable programs.
+/etc--system configurations files
+/home -- home directories
+/opt optional or thrid party software
+/tmp -- Temporary space,typically cleared on reboot.
+/usr -- user related programs.
+/var -- variable data,most notably log files
+/boot -- Files needed to boot the os.
+/cdrom -- Mount point for CD-ROMs.
+/cgroup -- control groups hierarchy.
+/dev -- devices files typically controlled by the os and the system administratir
+
+$ -- normal user
+# -- super user
+
+ls --- list directory contents
+cd ---changes the current directory
+pwd --Displays the present working directory
+cat -- concatenates and display files.
+echo -- dispaly arguments to the screen
+man -- displays the online manual
+exit -- exits the shell or your current session.
+clear -- clears the screens
+
+ls - F reveal file types
+/ Directory
+@ Link
+* Executable
+Ls -t list files by time
+ls -r Reverse order
+ls -latr long listing inckuding all files reverse sroted time
+
+ls options
+-a list all files,including hidden files
+--color list files with colorized output.
+-d list directory names, not contents.
+-l use the long listing format.
+-r Reverse the order.
+-R list files recursively.
+-t Sort by time, most recent first.
+
+~ represents home directory
+Pwd -Present working directory
+Where is (software installed properly)
+chmod x=1,w=2,r=4 
